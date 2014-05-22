@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/priv/global.css') }}"/>
+</head>
+
+	<div class="center content round">
+		<div class="head">
+			<img src="{{ url_for('static', filename='img/priv/logo.png') }}" alt="Logo" />
+			<div class="online"><b>0</b> Inno's online now!</div>
+		</div>
+
+		<form action="register" method="post">
+			<div class="left page round">
+				<p style="margin-bottom: 18px;">Check in and check it out! - Become an Inno user!</p>
+					
+				<div class="register">
+					<div class="left small">
+						<p><label for="username">Username:</label><br />
+                        {{ rform.username }}
+						<p class="help">Your name can contain lowercase and uppercase letters, numbers and characters -=?!@:.</p>
+							
+						<p><label for="email">Email:</label><br />
+                        {{ rform.email }}
+						<p><label for="password">Password:</label><br />
+                        {{ rform.password }}
+						<p><label for="retypenpassword">Retype password:</label><br />
+                        {{ rform.confirm_password }}
+                        </div>
+						
+					
+				</div>
+			</div>
+				
+			<div class="bottom clear">
+				<a href="index" class="cancel"><span>Cancel</span></a>
+				<input type="submit" class="button round pos-right" name="register" value="Done" />
+			</div>
+		</form>
+			
+		<div class="clear"></div>
+	</div>
+				
+	<div class="center copyright">
+		<center><a href="#">innoCMS</a></center>
+
+	</div>
+</html>

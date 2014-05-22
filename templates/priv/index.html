@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Index</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/priv/global.css') }}"/>
+</head>
+<div class="center content round">
+		<div class="head">
+			<img src="{{ url_for('static', filename='img/priv/logo.png') }}" alt="Logo" />
+			<div class="online"><b>0</b> Inno's online now!</div>
+		</div>
+        
+		<div class="left login small round">
+				
+			<form action="index" method="post">
+				<p><label for="username">Username:</label><br />
+				{{ lform.login_user }}
+
+				<p><label for="password">Password:</label><br />
+				{{ lform.login_pass }}
+				<input type="submit" name="login" class="button round" value="Sign in!" />
+			</form>
+		</div>
+			
+		<div class="right register green small round">
+			New here?
+			<p><img src="{{ url_for('static', filename='img/priv/smallhotel.png') }}" alt="hotel" /></p>
+			<a href="register">REGISTER FOR FREE!</a>
+		</div>
+			
+		<div class="clear"></div>
+	</div>
+		
+	<div class="center copyright">
+		 <center><a href="#">innoCMS</a></center>
+
+	</div>
+</html>

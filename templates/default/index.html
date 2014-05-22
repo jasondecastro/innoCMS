@@ -1,0 +1,90 @@
+<!--
+	Style by Cranavvo
+	http://mrconnor.co.uk
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Habbo Hotel</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.default.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.forms.css') }}"/>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.glyphs.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.me.css') }}"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="{{ url_for('static', filename='js/default.script.js') }}"></script>
+	</head>
+	<body>
+		<div id="stat-bar">
+			<div id="stat-wrapper">
+				<ul>
+					<li><span class="icon-globe"></span>150 players online!</li>
+					<li><span class="icon-commentlove"></span> 150 players made friends!</li>
+					<li><span class="icon-home"></span>670 rooms built!</li>
+					<li><span class="icon-pacman"></span>69 games running! </li>
+					<li><span class="icon-flag"></span>6 moderators ready to help! </li>
+				</ul>
+			</div>
+		</div>
+		<div id="menu">&#9776; Login & Register</div>
+		<section id="user-actions">
+			<h3 class="title login"><span class="icon-authentication-keyalt"></span>I already have an account!</h3>
+			<div class="con_login">
+				<div>Welcome back to Habbo Hotel! Login using your details below!</div><br />
+				<div>
+					<form name="lform" method="post" action="/index">
+						{{ lform.login_user }}
+						{{ lform.login_pass }}
+						<input type="submit" value="Login to Habbo Hotel" />
+					</form>
+                    
+				</div>
+				<br />
+				<div>
+					<strong>I have forgotten my login details!</strong>
+				</div>
+			</div>
+			<h3 class="title register"><span class="icon-plus-sign"></span>I want to create an account!</h3>
+			<div class="con_register">
+				<div>Fill out the fields below and press sign-up to create your Habbo!</div><br />
+				<div>
+					<form name="rform" method="post" action="/index">
+						{{ rform.username }}
+                        {{ rform.email }}
+                        {{ rform.password }}
+                        {{ rform.confirm_password }}
+						<div>
+							By registering or logging-into Habbo Hotel you're willingly accepting the <strong>Terms of Service</strong>. Are you aware of these terms?<br /><br />
+							<span class="checkbox"><input type="checkbox" name="tos" value="1">I am aware and I accept these terms.</span><br /><br/ >
+						</div>
+						<input type="submit" value="Register for Habbo Hotel" />
+					</form>
+				</div>
+			</div>
+		</section>
+		<section id="rooms">
+			<div id="news-wrapper">
+				<div id="news-box">
+					<div id="box">
+						<div id="title">Latest News</div>
+						<div class="post">
+							<strong>innoCMS Testing</strong>
+							<p>We've successfully opened up the text server for innoCMS! We hope you enjoy the brand new CMS!</p>
+						</div>
+						<div class="post">
+							<strong>No new news</strong>
+							<p>There is no news to be displayed here!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="welcome-wrapper">
+				<div id="welcome-box">
+					<div id="box">
+						Welcome to <strong>Habbo Hotel</strong> the number one private server online! With hundreds of users and thousands of playable games you'll never want to leave!<br /><br />Habbo comes with a vast range of rooms which have been made with extravogent wired creations and with a beautiful array of furniture!<br /><br />So what are you waiting for? Join in with the players and just have fun!
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
