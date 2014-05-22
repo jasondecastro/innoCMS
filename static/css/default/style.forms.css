@@ -1,0 +1,29 @@
+/*
+	Style by Cranavvo
+	http://mrconnor.co.uk/
+*/
+form	{
+	overflow: hidden;
+}
+form>input[type="text"], form>input[type="password"]	{
+	margin-bottom: 15px;
+	background: white;
+	width: 100%;
+	padding: 10px;
+}
+form>input[type="submit"]{
+	font-weight: bold;
+	background: #0087BD;
+	transition: background 1s;
+	padding: 10px;
+	border: none;
+	color: white;
+	float: right;
+}
+form>input[type="submit"]:hover{
+	background: #0076a3;
+}
+span.checkbox>input	{
+	margin-right: 10px;
+	float: left;
+}

@@ -1,0 +1,153 @@
+/*
+	Style by Cranavvo
+	http://mrconnor.co.uk/
+*/
+/* Master Style */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(http://fonts.googleapis.com/css?family=Domine:400,700&subset=latin,latin-ext);
+*	{
+	list-style-position: outside;
+	list-style-type: none;
+	font-family: inherit;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+html	{
+	height: 100%;
+	width: 100%;
+}
+html>body	{
+	/* Master */
+	min-height: 100%;
+	position: relative;
+	display: none;
+	overflow: scroll-x;
+	
+	/*#*/
+	font-family: 'Raleway', sans-serif;
+	background: url('../img/logo.png') no-repeat 25px 25px black;
+	font-size: 15px;
+	color: #333;
+}
+#rooms	{
+	position: relative;
+	width: 1200px;
+	height: 700px;
+	margin: 100px;
+}
+#menu	{
+	z-index: 999;
+	font-weight: bold;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	color: white;
+	display: none;
+}
+#welcome-wrapper	{
+	position: absolute;
+	top: 60px;
+	left: 60px;
+}
+#welcome-wrapper>#welcome-box	{
+	background: url('../img/room.png');
+	position: relative;
+	width: 715px;
+	height: 475px;
+}
+#welcome-wrapper>#welcome-box>#box	{
+	position: absolute;
+	background: white;
+	border: 5px solid #0087BD;
+	padding: 25px;
+	border-radius: 25px;
+	width: 50%;
+	top: 25%;
+	left: 25%;
+	
+}
+#news-wrapper	{
+	position: absolute;
+	top: 200px;
+	left: 550px;
+}
+#news-wrapper>#news-box	{
+	background: url('../img/room2.png');
+	position: relative;
+	width: 654px;
+	height: 501px;
+}
+#news-wrapper>#news-box>#box	{
+	position: absolute;
+	background: white;
+	border: 5px solid #0087BD;
+	border-radius: 25px;
+	width: 50%;
+	top: 15%;
+	left: 25%;
+}
+#news-wrapper>#news-box>#box>#title	{
+	background: #0087BD;
+	text-align: center;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+}
+#news-wrapper>#news-box>#box>.post	{
+	padding: 25px;
+}
+#news-wrapper>#news-box>#box>.post:nth-child(2n)	{
+	background: #efefef;
+}
+
+/* User Actions */
+#user-actions	{
+	z-index: 999;
+	background: #333;
+	position: absolute;
+	max-width: 300px;
+	height: 100%;
+	float: right;
+	width: 300px;
+	color: white;
+	right: 0;
+	top: 0;
+}
+#user-actions>h3.title	{
+	margin-bottom: 5px;
+	background: #1A1A1A;
+	padding: 15px;
+	cursor: pointer;
+}
+#user-actions>h3.title>span	{
+	margin-right: 10px;
+	float:left;
+}
+#user-actions>div	{ padding: 15px; }
+#user-actions>.con_register	{ display: none; }
+
+/* Statistics Bar */
+#stat-bar	{
+	min-width: 1314px;
+	min-height: 68px;
+	background: #0087BD;
+	position: absolute;
+	bottom: 0;
+	color: white;
+	width: 100%;
+}
+#stat-bar>#stat-wrapper>ul>li{
+	transition: background 1s, color 1s;
+	padding: 25px;
+	float: left;
+}
+#stat-bar>#stat-wrapper>#wrapper>ul>li.right{
+	float: right;
+}
+#stat-bar>#stat-wrapper>ul>li>span{
+	margin-right: 10px;
+	float:left;
+}
